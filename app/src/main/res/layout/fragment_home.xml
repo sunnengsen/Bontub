@@ -6,9 +6,107 @@
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/banner_home"
+            android:layout_width="match_parent"
+            android:layout_height="230dp">
+
+            <ImageView
+                android:id="@+id/res_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imghome"
+                tools:ignore="MissingConstraints" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000">
+
+                <LinearLayout
+                    android:id="@+id/logo_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="20dp"
+                        android:src="@drawable/logo" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_action_notification" />
+                </LinearLayout>
+
+                <SearchView
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/logo_notification"
+                    android:layout_marginHorizontal="46dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_rounded"
+                    android:iconifiedByDefault="false"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
+                    android:queryHint="Search" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/search"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:background="@drawable/background_temple"
+                        android:src="@drawable/img" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:background="@drawable/background_mountain"
+                        android:src="@drawable/img_1" />
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:background="@drawable/background_sea"
+                        android:src="@drawable/img_2" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/banner_home">
+
+        </RelativeLayout>
+    </RelativeLayout>
 
 </FrameLayout>
