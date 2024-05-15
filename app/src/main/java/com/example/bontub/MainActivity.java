@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = new ReserveFragment();
             } else if (item.getItemId() == R.id.profile) {
                 selectedFragment = new ProfileFragment();
+            } else if (item.getItemId() == R.id.fav){
+                selectedFragment = new PlaceFragment();
             }
             assert selectedFragment != null;
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
