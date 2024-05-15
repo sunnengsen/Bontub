@@ -71,8 +71,6 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/background_rounded"
                     android:iconifiedByDefault="false"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="10dp"
                     android:queryHint="Search" />
 
                 <LinearLayout
