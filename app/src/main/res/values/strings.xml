@@ -7,4 +7,7 @@
     <string name="Profile">Profile</string>
     <string name="Reserve">Reserve</string>
     <string name="Home">Home</string>
+    <string name="most_popular_places">Most Popular places</string>
+    <string name="see_all">veiw all</string>
+    <string name="reconmended">Reconmended</string>
 </resources>
