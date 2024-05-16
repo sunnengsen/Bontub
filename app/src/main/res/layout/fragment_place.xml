@@ -72,8 +72,10 @@
 
             <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="477dp"
                 android:layout_below="@+id/banner_place"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/half_rounded"
                 android:columnCount="1">
 
                 <include layout="@layout/activity_place" />
