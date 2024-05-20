@@ -1,6 +1,7 @@
 package com.example.bontub.models;
 
 public class AllPlace {
+    private int id;
     private String img;
     private String title;
     private String des;
@@ -27,5 +28,13 @@ public class AllPlace {
 
     public void setDes(String des) {
         this.des = des;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.bontub;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -67,9 +68,9 @@ public class ProfileFragment extends Fragment {
         binding.recyclerView.setAdapter(allPlaceAdapter);
 
         allPlaceAdapter.setOnItemClickListener(allPlace -> {
-            // Handle the item click here
-            Log.v("ItemClick", "Clicked on: " + allPlace.getTitle());
-            // You can add more actions here, like navigating to a new fragment or activity
+            Intent intent = new Intent(getContext(), PlaceFragment.class);
+            intent.putExtra("place_id", allPlace.getId());
+            startActivity(intent);
         });
     }
 }
