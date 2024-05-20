@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.example.bontub.adapters.AllPlaceAdapter;
 import com.example.bontub.databinding.FragmentProfileBinding;
 import com.example.bontub.models.AllPlace;
-import com.example.bontub.models.PlaceResponse;
 import com.example.bontub.services.ApiService;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -39,16 +38,16 @@ public class ProfileFragment extends Fragment {
 
     private void loadProfileList() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:8080/")
+                .baseUrl("https://api.derleng.site")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         ApiService apiService = retrofit.create(ApiService.class);
-        Call<PlaceResponse> task = apiService.listAllPlace();
-        task.enqueue(new retrofit2.Callback<PlaceResponse>() {
+        Call<List<AllPlace>> task = apiService.listAllPlace();
+        task.enqueue(new retrofit2.Callback<List<AllPlace>>() {
             @Override
-            public void onResponse(Call<PlaceResponse> call, retrofit2.Response<PlaceResponse> response) {
+            public void onResponse(Call<List<AllPlace>> call, retrofit2.Response<List<AllPlace>> response) {
                 if (response.isSuccessful()) {
-                    showAllPlace(response.body().getContent());
+                    showAllPlace(response.body());
                     Log.v("Response", "Success: " + response.body());
                 }
                 else {
@@ -56,7 +55,7 @@ public class ProfileFragment extends Fragment {
                 }
             }
             @Override
-            public void onFailure(Call<PlaceResponse> call, Throwable t) {
+            public void onFailure(Call<List<AllPlace>> call, Throwable t) {
                 Log.v("Response", "Error: " + t.getMessage());
             }
         });
@@ -67,7 +66,6 @@ public class ProfileFragment extends Fragment {
         AllPlaceAdapter allPlaceAdapter = new AllPlaceAdapter();
         allPlaceAdapter.submitList(allPlaces);
         binding.recyclerView.setAdapter(allPlaceAdapter);
-
         allPlaceAdapter.setOnItemClickListener(allPlace -> {
             Intent intent = new Intent(getContext(), PlaceFragment.class);
             intent.putExtra("place_id", allPlace.getId());

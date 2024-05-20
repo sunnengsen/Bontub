@@ -65,9 +65,9 @@ public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.Produ
             this.binding = binding;
         }
         public void bind(AllPlace allPlace) {
-            Picasso.get().load(allPlace.getPhotoUrl()).into(binding.imageView);
-            this.binding.titleText.setText(String.valueOf(allPlace.getId()));
-
+            Picasso.get().load(allPlace.getPageBannerUrl()).into(binding.imageView);
+            this.binding.province.setText(allPlace.getProvinceName());
+            this.binding.namePlace.setText(allPlace.getPageBannerTitle());
             itemView.setOnClickListener(v->{
                 if (listener != null){
                     listener.onItemClick(allPlace);

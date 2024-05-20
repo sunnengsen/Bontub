@@ -1,7 +1,7 @@
 package com.example.bontub.services;
 
 import com.example.bontub.models.AllPlace;
-import com.example.bontub.models.PlaceResponse;
+import com.example.bontub.models.Place;
 
 import java.util.List;
 
@@ -11,6 +11,6 @@ import retrofit2.http.Headers;
 
 public interface ApiService {
     @Headers("Accept-Language: en")
-    @GET("api/place/1")
-    Call<PlaceResponse> listAllPlace();
+    @GET("api/place/android")
+    Call<List<AllPlace>> listAllPlace();
 }
