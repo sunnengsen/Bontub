@@ -1,6 +1,5 @@
 package com.example.bontub;
 
-import static android.content.Intent.getIntent;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -54,11 +53,11 @@ public class PlaceFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = getIntent();
+//        Intent intent = getIntent();
 
-        int placeId = intent.getIntExtra("place_id", -1);
+//        int placeId = intent.getIntExtra("place_id", -1);
 
-        Log.v("PlaceActivity", "Received Place ID: " + placeId);
+//        Log.v("PlaceActivity", "Received Place ID: " + placeId);
     }
 
     @Override
