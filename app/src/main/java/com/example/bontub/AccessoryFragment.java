@@ -11,8 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import com.example.bontub.PlaceFragment;
 import com.example.bontub.adapters.AllPlaceAdapter;
-import com.example.bontub.databinding.FragmentProfileBinding;
+import com.example.bontub.databinding.FragmentAccessoryBinding;
 import com.example.bontub.models.AllPlace;
 import com.example.bontub.services.ApiService;
 import com.google.gson.Gson;
@@ -27,11 +28,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AccessoryFragment extends Fragment {
-    private FragmentProfileBinding binding;
+    private FragmentAccessoryBinding binding;
     @Nullable
     @Override
     public View onCreateView(@Nullable LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = FragmentProfileBinding.inflate(inflater, container, false);
+        binding = FragmentAccessoryBinding.inflate(inflater, container, false);
         loadProfileList();
         return binding.getRoot();
     }
