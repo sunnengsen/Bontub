@@ -16,6 +16,16 @@ import com.example.bontub.models.AllPlace;
 import com.squareup.picasso.Picasso;
 
 public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.ProductViewHolder> {
+
+    private OnItemClickListener listener;
+
+    public interface OnItemClickListener {
+        void onItemClick(AllPlace allPlace);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
     public AllPlaceAdapter() {
         super(new DiffUtil.ItemCallback<AllPlace>() {
             @Override
@@ -58,6 +68,12 @@ public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.Produ
             Picasso.get().load(allPlace.getImage()).into(binding.imageView);
             this.binding.pricingText.setText(allPlace.getTitle());
             this.binding.titleText.setText(allPlace.getDes());
+
+            itemView.setOnClickListener(v->{
+                if (listener != null){
+                    listener.onItemClick(allPlace);
+                }
+            });
         }
 
     }

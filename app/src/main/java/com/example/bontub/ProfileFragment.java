@@ -65,5 +65,11 @@ public class ProfileFragment extends Fragment {
         AllPlaceAdapter allPlaceAdapter = new AllPlaceAdapter();
         allPlaceAdapter.submitList(allPlaces);
         binding.recyclerView.setAdapter(allPlaceAdapter);
+
+        allPlaceAdapter.setOnItemClickListener(allPlace -> {
+            // Handle the item click here
+            Log.v("ItemClick", "Clicked on: " + allPlace.getTitle());
+            // You can add more actions here, like navigating to a new fragment or activity
+        });
     }
 }
