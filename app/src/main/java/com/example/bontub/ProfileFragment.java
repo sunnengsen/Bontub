@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.example.bontub.adapters.AllPlaceAdapter;
 import com.example.bontub.databinding.FragmentProfileBinding;
 import com.example.bontub.models.AllPlace;
+import com.example.bontub.models.PlaceResponse;
 import com.example.bontub.services.ApiService;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -42,12 +43,12 @@ public class ProfileFragment extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         ApiService apiService = retrofit.create(ApiService.class);
-        Call<List<AllPlace>> task = apiService.listAllPlace();
-        task.enqueue(new retrofit2.Callback<List<AllPlace>>() {
+        Call<PlaceResponse> task = apiService.listAllPlace();
+        task.enqueue(new retrofit2.Callback<PlaceResponse>() {
             @Override
-            public void onResponse(Call<List<AllPlace>> call, retrofit2.Response<List<AllPlace>> response) {
+            public void onResponse(Call<PlaceResponse> call, retrofit2.Response<PlaceResponse> response) {
                 if (response.isSuccessful()) {
-                    showAllPlace(response.body());
+                    showAllPlace(response.body().getContent());
                     Log.v("Response", "Success: " + response.body());
                 }
                 else {
@@ -55,13 +56,13 @@ public class ProfileFragment extends Fragment {
                 }
             }
             @Override
-            public void onFailure(Call<List<AllPlace>> call, Throwable t) {
+            public void onFailure(Call<PlaceResponse> call, Throwable t) {
                 Log.v("Response", "Error: " + t.getMessage());
             }
         });
     }
     private void showAllPlace(List<AllPlace> allPlaces){
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
         binding.recyclerView.setLayoutManager(gridLayoutManager);
         AllPlaceAdapter allPlaceAdapter = new AllPlaceAdapter();
         allPlaceAdapter.submitList(allPlaces);

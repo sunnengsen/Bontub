@@ -1,34 +1,12 @@
 package com.example.bontub.models;
 
+import java.util.List;
+
 public class AllPlace {
     private int id;
-    private String img;
-    private String title;
-    private String des;
-
-    public String getImage() {
-        return img;
-    }
-
-    public void setImage(String image) {
-        this.img = image;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDes() {
-        return des;
-    }
-
-    public void setDes(String des) {
-        this.des = des;
-    }
+    private String photoUrl;
+    private String photoUrlSm;
+    private String photoDescription;
 
     public int getId() {
         return id;
@@ -37,4 +15,29 @@ public class AllPlace {
     public void setId(int id) {
         this.id = id;
     }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public String getPhotoUrlSm() {
+        return photoUrlSm;
+    }
+
+    public void setPhotoUrlSm(String photoUrlSm) {
+        this.photoUrlSm = photoUrlSm;
+    }
+
+    public String getPhotoDescription() {
+        return photoDescription;
+    }
+
+    public void setPhotoDescription(String photoDescription) {
+        this.photoDescription = photoDescription;
+    }
 }
+

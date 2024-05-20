@@ -36,7 +36,7 @@ public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.Produ
             @SuppressLint("DiffUtilEquals")
             @Override
             public boolean areContentsTheSame(@NonNull AllPlace oldItem, @NonNull AllPlace newItem) {
-                return oldItem.getImage() == newItem.getImage();
+                return oldItem.getId() == newItem.getId();
 
             }
         });
@@ -65,9 +65,8 @@ public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.Produ
             this.binding = binding;
         }
         public void bind(AllPlace allPlace) {
-            Picasso.get().load(allPlace.getImage()).into(binding.imageView);
-            this.binding.pricingText.setText(allPlace.getTitle());
-            this.binding.titleText.setText(allPlace.getDes());
+            Picasso.get().load(allPlace.getPhotoUrl()).into(binding.imageView);
+            this.binding.titleText.setText(String.valueOf(allPlace.getId()));
 
             itemView.setOnClickListener(v->{
                 if (listener != null){
