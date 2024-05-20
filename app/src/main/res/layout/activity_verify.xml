@@ -20,7 +20,6 @@
             android:background="#80000000"
             android:padding="16sp"
             tools:ignore="MissingConstraints"
-
             >
 
             <RelativeLayout

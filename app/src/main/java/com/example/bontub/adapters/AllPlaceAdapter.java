@@ -1,6 +1,7 @@
 package com.example.bontub.adapters;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,9 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bontub.DetailActivity;
+import com.example.bontub.HomeFragment;
+import com.example.bontub.R;
 import com.example.bontub.databinding.ViewHolderItemBinding;
 import com.example.bontub.models.AllPlace;
 import com.squareup.picasso.Picasso;
@@ -68,11 +72,29 @@ public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.Produ
             Picasso.get().load(allPlace.getPageBannerUrl()).into(binding.imageView);
             this.binding.province.setText(allPlace.getProvinceName());
             this.binding.namePlace.setText(allPlace.getPageBannerTitle());
-            itemView.setOnClickListener(v->{
-                if (listener != null){
-                    listener.onItemClick(allPlace);
+
+            // Set click listener on imageView
+            binding.imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), DetailActivity.class);
+                    intent.putExtra("image_url", allPlace.getPageBannerUrl());
+                    intent.putExtra("province_name", allPlace.getProvinceName());
+                    intent.putExtra("page_banner_title", allPlace.getPageBannerTitle());
+                    intent.putExtra("page_banner_titles", allPlace.getPlaceTypeName());
+                    intent.putExtra("section1_photo_url", allPlace.getSection1PhotoUrl());
+                    intent.putExtra("section2_photo_url", allPlace.getSection2PhotoUrl());
+                    intent.putExtra("section2_photo_url2", allPlace.getSection2PhotoUrl2());
+                    intent.putExtra("section3_photo_url", allPlace.getSection3PhotoUrl());
+                    intent.putExtra("des", allPlace.getDescription());
+                    intent.putExtra("section1_photo_desc", allPlace.getSection1PhotoDesc());
+                    intent.putExtra("section2_photo_desc", allPlace.getSection2PhotoDesc());
+                    intent.putExtra("section3_photo_desc", allPlace.getSection3PhotoDesc());
+                    v.getContext().startActivity(intent);
+
                 }
             });
+
         }
 
     }

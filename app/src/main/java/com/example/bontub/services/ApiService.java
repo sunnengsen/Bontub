@@ -1,7 +1,6 @@
 package com.example.bontub.services;
 
 import com.example.bontub.models.AllPlace;
-import com.example.bontub.models.Place;
 
 import java.util.List;
 

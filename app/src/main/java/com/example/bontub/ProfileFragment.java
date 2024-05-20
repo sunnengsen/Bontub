@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.bontub.adapters.AllPlaceAdapter;
 import com.example.bontub.databinding.FragmentProfileBinding;
+import com.example.bontub.databinding.ViewHolderItemBinding;
 import com.example.bontub.models.AllPlace;
 import com.example.bontub.services.ApiService;
 import com.google.gson.Gson;
@@ -28,11 +30,22 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProfileFragment extends Fragment {
     private FragmentProfileBinding binding;
+    //private ViewHolderItemBinding binding;;
+    private ImageView imageView;
     @Nullable
     @Override
     public View onCreateView(@Nullable LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         loadProfileList();
+
+//        imageView = binding.recyclerView.findViewById(R.id.imageView);
+//
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                goToHomePage();
+//            }
+//        });
         return binding.getRoot();
     }
 
@@ -72,4 +85,9 @@ public class ProfileFragment extends Fragment {
             startActivity(intent);
         });
     }
+
+//    private void goToHomePage(){
+//        Intent intent = new Intent(getContext(), DetailActivity.class);
+//        startActivity(intent);
+//    }
 }
