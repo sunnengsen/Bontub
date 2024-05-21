@@ -61,16 +61,11 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = new AccessoryFragment();
             } else if (item.getItemId() == R.id.reserve) {
                 selectedFragment = new ReserveFragment();
-            } else if (item.getItemId() == R.id.profile) {
-                selectedFragment = new ProfileFragment();
-            } else if (item.getItemId() == R.id.fav) {
-                selectedFragment = new PlaceFragment();
             }
             assert selectedFragment != null;
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
             return true;
         });
-
         // Manually selecting the home item
         binding.bottomNav.setSelectedItemId(R.id.home);
     }

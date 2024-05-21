@@ -32,32 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#80000000"
-                    android:padding="16dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_action_back" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="1dp"
-                            android:layout_weight="7" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_action_notification" />
-                    </LinearLayout>
-                </RelativeLayout>
+                    android:padding="16dp"/>
 
             </RelativeLayout>
 
@@ -65,102 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/banner_place"
-                android:padding="25dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Mondolkiri"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Phum Pheakeysan" />
-
-                    <RatingBar
-                        android:id="@+id/star_count"
-                        style="@android:style/Widget.Material.Light.RatingBar.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:numStars="5"
-                        android:rating="3.3"
-                        android:stepSize="0.1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="One of the most distinctive features of Mondulkiri is its rugged terrain, which includes dense forests, rolling hills and picturesque waterfalls. The province is home to several protected areas, including the Phnom Prich Wildlife Sanctuary and the Srepok Wildlife Sanctuary."
-                        android:textSize="16dp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="230dp"
-                        android:layout_marginTop="15dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/imghome" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="Visit our Elephant Sanctuary go trekking in eastern Cambodia . Walk with our elephants and help wash them at a waterfall in the jungle."
-                        android:textSize="16dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="130dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_weight="1"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/imghome" />
-
-                        <View
-                            android:layout_width="10dp"
-                            android:layout_height="match_parent" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="130dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_weight="1"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/imghome" />
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="Visit our Elephant Sanctuary go trekking in eastern Cambodia . Walk with our elephants and help wash them at a waterfall in the jungle."
-                        android:textSize="16dp" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="230dp"
-                        android:layout_marginTop="15dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/imghome" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="Around the world the tortoise and/or turtle can be seen as a symbol of wisdom and knowledge, and is able to defend itself on its own. It can be regarded as personifying water, the moon, the Earth, time, immortality, and fertility."
-                        android:textSize="16dp" />
-                </LinearLayout>
-
-            </RelativeLayout>
+                android:padding="25dp"/>
         </RelativeLayout>
     </ScrollView>
 

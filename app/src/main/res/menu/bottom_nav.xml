@@ -6,20 +6,11 @@ android:title=""
         android:icon="@drawable/ic_action_home" />
     <item
         android:id="@+id/accessory"
-        android:icon="@drawable/ic_action_accessory"
+        android:icon="@drawable/ic_action_category"
         android:title="" />
 
     <item
         android:id="@+id/reserve"
-        android:icon="@drawable/ic_action_category"
-        android:title="" />
-    <item
-        android:id="@+id/fav"
-        android:icon="@drawable/ic_action_heart"
-        android:title="" />
-    <item
-        android:id="@+id/profile"
         android:icon="@drawable/ic_action_profile"
         android:title="" />
-
 </menu>
