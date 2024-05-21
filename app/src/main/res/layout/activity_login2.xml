@@ -5,29 +5,137 @@
     android:orientation="vertical"
     tools:context=".Login">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/email"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email" />
+        android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        <RelativeLayout
+            android:id="@+id/banner_login"
+            android:layout_width="match_parent"
+            android:layout_height="230sp"
+            android:background="#80000000"
+            tools:ignore="MissingConstraints">
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imghome" />
 
-    <TextView
-        android:id="@+id/registerNow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register Now" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="250dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="20dp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/welcomeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_below="@+id/logo"
+                    android:text="Welcome to Derleng!"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner_login"
+            android:layout_margin="16sp"
+            android:layout_marginTop="31dp"
+            android:layout_marginBottom="16sp">
+
+            <TextView
+                android:id="@+id/welcome_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back!"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/login_to_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcome_back"
+                android:text="Login to your account..."
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/labelEmail"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/login_to_account"
+                android:text="Email"
+                android:textSize="16sp"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/labelEmail"
+                android:background="@drawable/bg_img"
+                android:padding="10dp"
+                android:hint="example@gmail.com" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/labelPass"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/email"
+                android:text="Password"
+                android:textSize="16sp"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_img"
+                android:padding="10dp"
+                android:layout_below="@+id/labelPass"
+                android:hint="*********"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:text="Login" />
+
+            <TextView
+                android:id="@+id/registerNow"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login"
+                android:text="Don't Have Account? Register Now" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>
