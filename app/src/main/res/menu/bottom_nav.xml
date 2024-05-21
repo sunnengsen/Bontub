@@ -9,7 +9,6 @@ android:title=""
         android:icon="@drawable/ic_action_accessory"
         android:title="" />
 
-
     <item
         android:id="@+id/reserve"
         android:icon="@drawable/ic_action_category"
