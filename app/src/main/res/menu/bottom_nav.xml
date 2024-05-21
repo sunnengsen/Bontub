@@ -2,24 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:icon="@drawable/ic_action_home"
-        android:title="@string/Home" />
+android:title=""
+        android:icon="@drawable/ic_action_home" />
     <item
         android:id="@+id/accessory"
         android:icon="@drawable/ic_action_accessory"
-        android:title="@string/Accessory" />
+        android:title="" />
+
 
     <item
         android:id="@+id/reserve"
         android:icon="@drawable/ic_action_category"
-        android:title="@string/Reserve" />
+        android:title="" />
     <item
         android:id="@+id/fav"
         android:icon="@drawable/ic_action_heart"
-        android:title="Fav" />
+        android:title="" />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_action_profile"
-        android:title="@string/Profile" />
+        android:title="" />
 
 </menu>

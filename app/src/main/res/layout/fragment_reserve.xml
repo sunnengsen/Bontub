@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReserveFragment">
+    tools:context="com.example.derleng.ReserveFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -86,7 +86,7 @@
                         android:text="Phum Pheakeysan" />
 
                     <RatingBar
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/star_count"
                         style="@android:style/Widget.Material.Light.RatingBar.Small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

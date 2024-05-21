@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "606115261125",
+    "project_id": "derleng-227d0",
+    "storage_bucket": "derleng-227d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606115261125:android:fda31da7ce674c23469eac",
+        "android_client_info": {
+          "package_name": "com.example.bontub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606115261125-ojc1j55b1t93tjub72pojubgtfba7p9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALXxFMua76fVdpg2vDB0vLtIC939bMnFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606115261125-ojc1j55b1t93tjub72pojubgtfba7p9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

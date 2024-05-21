@@ -1,4 +1,4 @@
-package com.example.bontub;
+package com.example.derleng;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.derleng.R;
 import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
@@ -55,10 +56,13 @@ public class DetailActivity extends AppCompatActivity {
         TextView textView6 = findViewById(R.id.section3_photo_desc);
         textView6.setText(section3PhotoDesc);
 
-
-
-
-
-
+        Button backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
+
 }

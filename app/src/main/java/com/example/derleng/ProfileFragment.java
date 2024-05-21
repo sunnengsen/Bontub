@@ -1,4 +1,4 @@
-package com.example.bontub;
+package com.example.derleng;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,34 +6,41 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
-import com.example.bontub.PlaceFragment;
-import com.example.bontub.adapters.AllPlaceAdapter;
-import com.example.bontub.databinding.FragmentAccessoryBinding;
-import com.example.bontub.models.AllPlace;
-import com.example.bontub.services.ApiService;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.example.derleng.adapters.AllPlaceAdapter;
+import com.example.derleng.databinding.FragmentProfileBinding;
+import com.example.derleng.models.AllPlace;
+import com.example.derleng.services.ApiService;
 
-import java.lang.reflect.Type;
-import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class AccessoryFragment extends Fragment {
-    private FragmentAccessoryBinding binding;
+public class ProfileFragment extends Fragment {
+    private FragmentProfileBinding binding;
+    //private ViewHolderItemBinding binding;;
+    private ImageView imageView;
     @Nullable
     @Override
     public View onCreateView(@Nullable LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = FragmentAccessoryBinding.inflate(inflater, container, false);
+        binding = FragmentProfileBinding.inflate(inflater, container, false);
         loadProfileList();
+
+//        imageView = binding.recyclerView.findViewById(R.id.imageView);
+//
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                goToHomePage();
+//            }
+//        });
         return binding.getRoot();
     }
 
@@ -73,4 +80,9 @@ public class AccessoryFragment extends Fragment {
             startActivity(intent);
         });
     }
+
+//    private void goToHomePage(){
+//        Intent intent = new Intent(getContext(), DetailActivity.class);
+//        startActivity(intent);
+//    }
 }

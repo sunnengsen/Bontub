@@ -1,4 +1,4 @@
-package com.example.bontub.adapters;
+package com.example.derleng.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,11 +12,9 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bontub.DetailActivity;
-import com.example.bontub.HomeFragment;
-import com.example.bontub.R;
-import com.example.bontub.databinding.ViewHolderItemBinding;
-import com.example.bontub.models.AllPlace;
+import com.example.derleng.DetailActivity;
+import com.example.derleng.databinding.ViewHolderItemBinding;
+import com.example.derleng.models.AllPlace;
 import com.squareup.picasso.Picasso;
 
 public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.ProductViewHolder> {
@@ -62,7 +60,7 @@ public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.Produ
         holder.bind(allPlace);
     }
 
-    public class ProductViewHolder extends RecyclerView.ViewHolder {
+    public static class ProductViewHolder extends RecyclerView.ViewHolder {
         private final ViewHolderItemBinding binding;
         public ProductViewHolder( ViewHolderItemBinding binding) {
             super(binding.getRoot());
@@ -90,6 +88,7 @@ public class AllPlaceAdapter extends ListAdapter<AllPlace, AllPlaceAdapter.Produ
                     intent.putExtra("section1_photo_desc", allPlace.getSection1PhotoDesc());
                     intent.putExtra("section2_photo_desc", allPlace.getSection2PhotoDesc());
                     intent.putExtra("section3_photo_desc", allPlace.getSection3PhotoDesc());
+                    intent.putExtra("star_count", allPlace.getStarCount());
                     v.getContext().startActivity(intent);
 
                 }

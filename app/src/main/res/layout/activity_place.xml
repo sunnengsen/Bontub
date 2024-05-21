@@ -78,7 +78,7 @@
                     android:paddingHorizontal="10dp"
                     >
                     <RatingBar
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/star_count"
                         style="@android:style/Widget.Material.Light.RatingBar.Small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

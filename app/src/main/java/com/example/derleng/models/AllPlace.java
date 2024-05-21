@@ -1,18 +1,20 @@
-package com.example.bontub.models;
+package com.example.derleng.models;
 
-public class PlaceDetail {
+public class AllPlace {
     private int id;
-    private String pageBannerTitle;
     private String provinceName;
     private String pageBannerUrl;
+    private String pageBannerTitle;
+    private String placeTypeName;
     private String section1PhotoUrl;
     private String section2PhotoUrl;
     private String section3PhotoUrl;
-    private String section4PhotoUrl;
     private String section1PhotoDesc;
     private String section2PhotoDesc;
+    private String section2PhotoUrl2;
     private String section3PhotoDesc;
-    private String section4PhotoDesc;
+    private String description;
+    private int starCount;
 
     public int getId() {
         return id;
@@ -20,14 +22,6 @@ public class PlaceDetail {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getPageBannerTitle() {
-        return pageBannerTitle;
-    }
-
-    public void setPageBannerTitle(String pageBannerTitle) {
-        this.pageBannerTitle = pageBannerTitle;
     }
 
     public String getProvinceName() {
@@ -44,6 +38,22 @@ public class PlaceDetail {
 
     public void setPageBannerUrl(String pageBannerUrl) {
         this.pageBannerUrl = pageBannerUrl;
+    }
+
+    public String getPageBannerTitle() {
+        return pageBannerTitle;
+    }
+
+    public void setPageBannerTitle(String pageBannerTitle) {
+        this.pageBannerTitle = pageBannerTitle;
+    }
+
+    public String getPlaceTypeName() {
+        return placeTypeName;
+    }
+
+    public void setPlaceTypeName(String placeTypeName) {
+        this.placeTypeName = placeTypeName;
     }
 
     public String getSection1PhotoUrl() {
@@ -70,14 +80,6 @@ public class PlaceDetail {
         this.section3PhotoUrl = section3PhotoUrl;
     }
 
-    public String getSection4PhotoUrl() {
-        return section4PhotoUrl;
-    }
-
-    public void setSection4PhotoUrl(String section4PhotoUrl) {
-        this.section4PhotoUrl = section4PhotoUrl;
-    }
-
     public String getSection1PhotoDesc() {
         return section1PhotoDesc;
     }
@@ -102,11 +104,27 @@ public class PlaceDetail {
         this.section3PhotoDesc = section3PhotoDesc;
     }
 
-    public String getSection4PhotoDesc() {
-        return section4PhotoDesc;
+    public String getSection2PhotoUrl2() {
+        return section2PhotoUrl2;
     }
 
-    public void setSection4PhotoDesc(String section4PhotoDesc) {
-        this.section4PhotoDesc = section4PhotoDesc;
+    public void setSection2PhotoUrl2(String section2PhotoUrl2) {
+        this.section2PhotoUrl2 = section2PhotoUrl2;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getStarCount() {
+        return starCount;
+    }
+
+    public void setStarCount(int starCount) {
+        this.starCount = starCount;
     }
 }

@@ -1,6 +1,6 @@
-package com.example.bontub.models;
+package com.example.derleng.models;
 
-public class AllPlace {
+public class Recommend{
     private int id;
     private String provinceName;
     private String pageBannerUrl;
@@ -14,6 +14,7 @@ public class AllPlace {
     private String section2PhotoUrl2;
     private String section3PhotoDesc;
     private String description;
+    private int starCount;
 
     public int getId() {
         return id;
@@ -117,5 +118,13 @@ public class AllPlace {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getStarCount() {
+        return starCount;
+    }
+
+    public void setStarCount(int starCount) {
+        this.starCount = starCount;
     }
 }

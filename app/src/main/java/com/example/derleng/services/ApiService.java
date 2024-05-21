@@ -1,6 +1,6 @@
-package com.example.bontub.services;
+package com.example.derleng.services;
 
-import com.example.bontub.models.AllPlace;
+import com.example.derleng.models.AllPlace;
 
 import java.util.List;
 
